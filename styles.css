@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  color: #333;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #f3ec78, #af4261, #5f72be, #9bafd9);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.main-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero {
+  padding-top: 80px;
+}
+
+.container {
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 450px;
+}
+
+.wallet-img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: walletPulse 2s infinite;
+}
+
+@keyframes walletPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.slider {
+  font-size: 18px;
+  min-height: 50px;
+  margin: 10px 0 20px;
+  position: relative;
+}
+
+.slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Features Section */
+.features {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.feature {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+.feature img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature:nth-child(1) { animation-delay: 0.2s; }
+.feature:nth-child(2) { animation-delay: 0.5s; }
+.feature:nth-child(3) { animation-delay: 0.8s; }
+
+/* Auth Page Styles */
+.auth-container {
+  position: relative;
+  z-index: 2;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 100px auto;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.form-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.tab-switcher {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-switcher button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  margin: 0 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+  color: #666;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-switcher button.active-tab {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 0.5s ease;
+}
+
+.form input {
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.form.active-form {
+  display: flex;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dashboard Page Styles */
+.dashboard-container {
+  position: relative;
+  z-index: 2;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  margin: 100px auto;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.balance-card {
+  background: #f0f8ff;
+  border: 2px solid #007bff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.balance-card h1 {
+  font-size: 32px;
+  margin-top: 5px;
+  color: #007bff;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.actions .btn {
+  flex: 1;
+  min-width: 100px;
+}
+
+.history-section h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.transaction-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.transaction-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+}

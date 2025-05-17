@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Anusha’s Wallet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="dashboard-container">
+    <h2 class="dashboard-title">Loading your wallet...</h2>
+
+    <div class="balance-card">
+      <p>Your Balance</p>
+      <h1 id="balance">₹ --.--</h1>
+    </div>
+
+    <div class="actions">
+      <button class="btn">Deposit</button>
+      <button class="btn">Withdraw</button>
+      <button class="btn">Transfer</button>
+    </div>
+
+    <div class="history-section">
+      <h3>Transaction History</h3>
+      <ul class="transaction-list" id="txn-list">
+        <li>Loading...</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

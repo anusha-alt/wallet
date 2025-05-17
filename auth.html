@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Anusha’s Digital Wallet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="auth-container">
+    <h1 class="form-title">Welcome Back!</h1>
+
+    <div class="tab-switcher">
+      <button id="loginTab" class="active-tab">Login</button>
+      <button id="registerTab">Register</button>
+    </div>
+
+    <form id="loginForm" class="form active-form">
+      <input type="text" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit" class="btn">Login</button>
+    </form>
+
+    <form id="registerForm" class="form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+
+
+  <script src="auth.js"></script>
+</body>
+</html>
